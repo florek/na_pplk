@@ -51,7 +51,18 @@ def my_median(A):
     return A[center_value]
 
 
-numbers = [1, 7, 10, 12, 14, 15, 19, 22, 27, 33, 41, 100, 104]
+def my_median2(A):
+    lower_numbers_must_have = int(math.floor(len(A) / 2)) + 1
+    lower_numbers = A[0:lower_numbers_must_have]
+    for elem in A[lower_numbers_must_have:]:
+        max_number = max(lower_numbers)
+        max_number_idx = lower_numbers.index(max_number)
+        if max_number > elem:
+            lower_numbers[max_number_idx] = elem
+    return max(lower_numbers)
+
+
+numbers = [10, 8, 7, 2, 1, 3, 4]
 start_time = time.time()
 print(linear_median(numbers))
 end_time = time.time()
@@ -59,5 +70,10 @@ print((end_time - start_time) * 1000)
 
 start_time = time.time()
 print(my_median(numbers))
+end_time = time.time()
+print((end_time - start_time) * 1000)
+
+start_time = time.time()
+print(my_median2(numbers))
 end_time = time.time()
 print((end_time - start_time) * 1000)
