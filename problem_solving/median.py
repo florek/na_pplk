@@ -77,3 +77,24 @@ start_time = time.time()
 print(my_median2(numbers))
 end_time = time.time()
 print((end_time - start_time) * 1000)
+
+numers = []
+
+for i in range(1000):
+    numbers.append(random.randint(1, 10000))
+
+start_time = time.time()
+print(linear_median(numbers))
+end_time = time.time()
+print((end_time - start_time) * 1000)
+
+start_time = time.time()
+print(my_median(numbers))
+end_time = time.time()
+print((end_time - start_time) * 1000)
+
+start_time = time.time()
+print(my_median2(numbers))
+end_time = time.time()
+print((end_time - start_time) * 1000)
+
