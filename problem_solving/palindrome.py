@@ -39,3 +39,21 @@ start_time = time.time()
 print(is_palindrome3(text))
 end_time = time.time()
 print((end_time - start_time) * 1000)
+
+text = "oko".replace(" ", "").lower()
+
+start_time = time.time()
+print(is_palindrome1(text))
+end_time = time.time()
+print((end_time - start_time) * 1000)
+
+start_time = time.time()
+print(is_palindrome2(text))
+end_time = time.time()
+print((end_time - start_time) * 1000)
+
+start_time = time.time()
+print(is_palindrome3(text))
+end_time = time.time()
+print((end_time - start_time) * 1000)
+
