@@ -1,4 +1,6 @@
+import math
 import random
+import time
 
 
 def partition(A, lo, hi, idx):
@@ -43,5 +45,19 @@ def linear_median(A):
     return A[lo]
 
 
-numbers = [1, 7, 10, 12, 14, 15, 19]
+def my_median(A):
+    sorted(A)
+    center_value = int(math.ceil((len(A) - 1) / 2))
+    return A[center_value]
+
+
+numbers = [1, 7, 10, 12, 14, 15, 19, 22, 27, 33, 41, 100, 104]
+start_time = time.time()
 print(linear_median(numbers))
+end_time = time.time()
+print((end_time - start_time) * 1000)
+
+start_time = time.time()
+print(my_median(numbers))
+end_time = time.time()
+print((end_time - start_time) * 1000)
