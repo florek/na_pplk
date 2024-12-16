@@ -46,7 +46,7 @@ def linear_median(A):
 
 
 def my_median(A):
-    sorted(A)
+    A = sorted(A)
     center_value = int(math.ceil((len(A) - 1) / 2))
     return A[center_value]
 
